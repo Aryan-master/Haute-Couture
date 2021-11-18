@@ -25,10 +25,10 @@
 
 #myDiv {
   display: none;
-  background-image: url('/unsplash-5.jpg');
+  background-image: url("/unsplash-5.jpg");
 }
 .body {
-  background-image:url('/unsplash-loadBG.jpg');
+  background-image:url("/unsplash-loadBG.jpg");
     background-position: center;
     background-attachment:fixed;
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ footer a img:hover {
 
 
 .globalBackground{
-background-image: url('/unsplash-GB.jpg');
+background-image: url("/unsplash-GB.jpg");
 background-position: center;
 background-attachment: scroll;
 background-repeat: no-repeat;
