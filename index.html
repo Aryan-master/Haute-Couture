@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HauteCouture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="res/TL.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="body" onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv">
+        <script>
+            var myVar;
+            function myFunction() {
+                myVar = setTimeout(showPage, 3000);
+            }
+            function showPage() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("myDiv").style.display = "block";
+            }
+        </script>
+        <div style="background-color: rgba(255, 255, 255, 0.699);">
+            <nav>
+                <ul>
+                    <li1><a href="index.html" title="Home">Home</a></li1>
+                    <li1><a href="mens-section.html" title="Men's">Men's</a></li1>
+                    <li1><a href="womens-section.html" title="Women's">Women's</a></li1>
+                    <li1><a href="Shoe-section.html" title="Home">Shoes</a></li1>
+                    <li1><a href="combo-section.html" title="Home">Combos</a></li1>
+                    <li1 style="float: right;"><a href="signIn.html" title="Sign in">Sign in</a></li1>
+                </ul>
+            </nav>
+            <div id="ic">
+                <img class="icon" src="res/haute-1.svg">
+            </div>
+            <p class="motto"><q>Strive For Fashion</q></p>
+            <section class="description">
+                <p>Fashion is a form of self-expression and autonomy at a particular period and place and in a specific
+                    context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.</p>
+            </section>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                <a href="mens-section.html"><img src="res/dress-4.jpg" style="width:100%;"></a>
+                    <div class="text">Menswear</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                <a href="womens-section.html"><img src="res/dress-2.jpg" style="width:100%;"></a>
+                    <div class="text">Ladieswear</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                <a href="Shoe-section.html"><img src="res/dress-3.jpg" style="width:100%;"></a>
+                    <div class="text">Sneakers</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                <a href="combo-section.html"><img src="res/dress-1.jpg" style="width:100%;"></a>
+                    <div class="text">Combos</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+            <div class="poster pos">
+                <div class="pos">
+                    <a href="mens-section.html">
+                        <img src="res/fashion-1.jpg" alt="clothing dresses"></a>
+                    <a href="womens-section.html"><img src="res/fashion-0.jpg" alt="clothing dresses"></a>
+                </div>
+            </div>
+            <footer class="footer">
+                <a href="https://github.com/Aryan-master" title="github" target="_blank"><img src="res/github.png"
+                        style="border-radius: 20px;"></a>
+                <a href="https://www.linkedin.com/in/aryan-nigam-16788a190/" title="linkedin" target="_blank"><img
+                        src="res/linkedin.png"></a>
+                <a href="https://www.instagram.com/iaryannigam____/" title="instagram" target="_blank"><img
+                        src="res/instagram.png"></a>
+                <a href="https://twitter.com/aryannigam18" title="twitter" target="_blank"><img src="res/twitter.png"></a>
+            </footer>
+            <div class="solid-grey">
+                <br>
+                Copyright &copy;2021 HauteCouture. designed Original with ❤ by Aryan Nigam.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
